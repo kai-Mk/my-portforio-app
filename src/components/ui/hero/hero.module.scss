@@ -6,10 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 32px;
+  margin-top: $section-top-margin;
   background-attachment: fixed;
   text-align: center;
-  overflow: hidden;
 
   .hero_text {
     position: relative;

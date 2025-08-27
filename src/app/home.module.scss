@@ -6,6 +6,9 @@
   height: auto;
 
   .main {
-    padding: 24px 32px;
+    padding: 24px 0;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
   }
 }

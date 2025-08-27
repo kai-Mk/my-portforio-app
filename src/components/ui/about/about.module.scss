@@ -1,0 +1,9 @@
+@use '@/styles' as *;
+
+.inner {
+  display: flex;
+
+  .column {
+    flex: 1;
+  }
+}

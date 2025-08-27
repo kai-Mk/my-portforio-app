@@ -1,0 +1,12 @@
+@use '@/styles' as *;
+
+.section {
+  margin-top: $section-top-margin;
+  .title {
+    font-size: $font-size-lg;
+  }
+
+  .container {
+    margin-top: 8px;
+  }
+}
