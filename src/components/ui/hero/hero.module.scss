@@ -1,0 +1,93 @@
+@use '@/styles' as *;
+
+// Hero Section Styles
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  background-attachment: fixed;
+  text-align: center;
+  overflow: hidden;
+
+  .hero_text {
+    position: relative;
+    z-index: 2;
+    font-size: $font-size-md;
+    line-height: 1.8;
+    margin: 0 auto;
+    font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    .first_text {
+      font-size: $font-size-lg;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    // タイピングアニメーション風の効果
+    animation: fadeInUp 1.2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+
+    br {
+      display: block;
+      margin: 1rem 0;
+
+      @media (max-width: 768px) {
+        margin: 0.75rem 0;
+      }
+    }
+  }
+
+  // レスポンシブ対応
+  @media (max-width: 1024px) {
+    min-height: 70vh;
+    padding: 3rem 1.5rem;
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.7;
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: 60vh;
+    padding: 2.5rem 1rem;
+    background-attachment: scroll; // モバイルでのパフォーマンス向上
+
+    p {
+      font-size: clamp(0.95rem, 3vw, 1.125rem);
+      line-height: 1.6;
+      max-width: 100%;
+
+      br {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    min-height: 50vh;
+    padding: 2rem 0.75rem;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+// アニメーション定義
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
