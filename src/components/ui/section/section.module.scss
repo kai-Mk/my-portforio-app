@@ -3,7 +3,9 @@
 .section {
   margin-top: $section-top-margin;
   .title {
-    font-size: $font-size-lg;
+    font-size: $font-size-xl;
+    text-align: center;
+    margin-bottom: 24px;
   }
 
   .container {

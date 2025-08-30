@@ -5,5 +5,128 @@
 
   .column {
     flex: 1;
+
+    .introduction_container,
+    .skill_container,
+    .certifications_container {
+      width: 100%;
+
+      .container_title {
+        font-size: $font-size-lg;
+        position: relative;
+        width: fit-content;
+        margin-bottom: 8px;
+
+        &::after {
+          content: '';
+          width: 30px;
+          height: 3px;
+          border-radius: 3px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $accent-color;
+        }
+      }
+    }
+
+    .introduction_container {
+      .introduction_list {
+        width: 100%;
+
+        .introduction_item {
+          padding: 8px 0;
+          display: flex;
+
+          .item_title {
+            font-size: $font-size-md;
+            font-weight: 600;
+            flex: 2;
+          }
+
+          .item_text {
+            flex: 5;
+            font-size: $font-size-md;
+            .small_text {
+              font-size: $font-size-sm;
+              margin-left: 8px;
+            }
+
+            .exciting_text {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    .skill_container {
+      margin-left: 24px;
+
+      .skill_category {
+        margin-top: 16px;
+        .category_title {
+          font-size: $font-size-md;
+          font-weight: 600;
+          margin-bottom: 8px;
+        }
+
+        .skill_list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          padding: 0;
+          margin: 0;
+
+          .skill_item {
+            font-size: $font-size-sm;
+            padding: 4px 8px;
+            border-radius: 9999px;
+            font-size: 14px;
+            background: linear-gradient(135deg, #e6fffa, #b2f5ea);
+            color: #2d3748;
+            border: 1px solid rgba(56, 161, 105, 0.2);
+          }
+        }
+
+        &.category_1 {
+          .skill_item {
+            background: linear-gradient(135deg, #fef5e7, #fed7aa);
+            border-color: rgba(251, 146, 60, 0.2);
+          }
+        }
+
+        &.category_2 {
+          .skill_item {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-color: rgba(245, 158, 11, 0.2);
+          }
+        }
+
+        &.category_3 {
+          .skill_item {
+            background: linear-gradient(135deg, #e0f2fe, #b3e5fc);
+            border-color: rgba(6, 182, 212, 0.2);
+          }
+        }
+      }
+    }
+
+    .certifications_container {
+      margin-left: 24px;
+      margin-top: 24px;
+
+      .certifications_list {
+        .certifications_item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 8px;
+        }
+      }
+    }
   }
 }
