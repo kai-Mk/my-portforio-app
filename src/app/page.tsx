@@ -1,7 +1,6 @@
 import Header from '@/components/ui/header/Header';
 import s from './home.module.scss';
-import Hero from '@/components/ui/hero/Hero';
-import About from '@/components/ui/about/About';
+import { About, Contact, Hero, PersonalProject, Work } from '@/components/ui';
 
 export default function Home() {
   return (
@@ -10,6 +9,9 @@ export default function Home() {
       <div className={s.main}>
         <Hero />
         <About />
+        <Work />
+        <PersonalProject />
+        <Contact />
       </div>
     </div>
   );
