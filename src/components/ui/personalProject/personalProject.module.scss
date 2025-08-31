@@ -54,14 +54,14 @@
         }
 
         .project_name {
-          font-size: 1.2rem;
+          font-size: $font-size-lg;
           font-weight: 600;
           margin-bottom: 8px;
           color: #111827;
         }
 
         .project_lang {
-          font-size: 0.9rem;
+          font-size: $font-size-md;
           color: #6b7280;
         }
       }

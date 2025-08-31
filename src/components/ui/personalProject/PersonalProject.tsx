@@ -23,7 +23,7 @@ const PersonalProject = async () => {
                   className={s.project_link}
                 >
                   <h3 className={s.project_name}>{repo.name}</h3>
-                  <p className={s.project_lang}>概要: {repo.description ?? '不明'}</p>
+                  <p className={s.project_description}>説明: {repo.description ?? '不明'}</p>
                   <p className={s.project_lang}>使用言語: {repo.language ?? '不明'}</p>
                 </a>
               </li>
