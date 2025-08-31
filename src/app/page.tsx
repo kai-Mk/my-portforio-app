@@ -1,6 +1,7 @@
-import Header from '@/components/ui/header/Header';
+import Header from '@/components/layout/header/Header';
 import s from './home.module.scss';
 import { About, Contact, Hero, PersonalProject, Work } from '@/components/ui';
+import Footer from '@/components/layout/footer/Footer';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <PersonalProject />
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 }
