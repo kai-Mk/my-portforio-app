@@ -7,8 +7,6 @@ import { githubRepos } from './githubRepos';
 const PersonalProject = async () => {
   const repos = await getGitHubData(githubRepos);
 
-  console.log(repos);
-
   return (
     <Section title='Personal Project'>
       <div className={s.project_container}>

@@ -1,1 +1,63 @@
 @use '@/styles' as *;
+
+.contact_container {
+  background: #f5f6eb;
+  padding: 40px;
+  border-radius: 12px;
+
+  .contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form_group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      .form_label {
+        font-size: $font-size-md;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .form_input,
+      .form_textarea {
+        font-size: $font-size-md;
+        padding: 10px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        outline: none;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+
+        &:focus {
+          border-color: #4b5563;
+          box-shadow: 0 0 0 3px rgba(75, 85, 99, 0.2);
+        }
+      }
+
+      .form_textarea {
+        resize: vertical;
+      }
+    }
+
+    .form_button {
+      align-self: center;
+      width: 120px;
+      background: #111827;
+      color: #fff;
+      font-size: $font-size-md;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: #374151;
+      }
+    }
+  }
+}
