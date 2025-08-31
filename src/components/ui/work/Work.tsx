@@ -5,12 +5,11 @@ import s from './work.module.scss';
 const Work = () => {
   return (
     <Section title='Work'>
-      <div>実際にはたらいた案件</div>
       <div className={s.container}>
         <ul className={s.list}>
           <li className={s.item}>
             <h3>タイトル</h3>
-            <img src='' alt='' />
+            <div className={s.image}></div>
             <div>リンク</div>
           </li>
         </ul>

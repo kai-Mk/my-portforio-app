@@ -1,1 +1,70 @@
 @use '@/styles' as *;
+
+.project_container {
+  padding: 20px 0;
+
+  .project_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .project_item {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .project_link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+
+        &::after {
+          content: 'GitHubで見る'; // tips文言
+          position: absolute;
+          top: -32px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #111827;
+          color: #fff;
+          font-size: 0.75rem;
+          padding: 4px 8px;
+          border-radius: 6px;
+          white-space: nowrap;
+          opacity: 0;
+          pointer-events: none;
+          transition:
+            opacity 0.2s ease,
+            transform 0.2s ease;
+        }
+        &:hover::after {
+          opacity: 1;
+          transform: translateX(-50%) translateY(2px); // 少し浮かせる
+        }
+
+        .project_name {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 8px;
+          color: #111827;
+        }
+
+        .project_lang {
+          font-size: 0.9rem;
+          color: #6b7280;
+        }
+      }
+    }
+  }
+}
