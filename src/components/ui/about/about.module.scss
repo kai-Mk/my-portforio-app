@@ -2,6 +2,9 @@
 
 .inner {
   display: flex;
+  @include sp {
+    flex-direction: column;
+  }
 
   .column {
     flex: 1;
@@ -66,6 +69,11 @@
     .skill_container {
       margin-left: 24px;
 
+      @include sp {
+        margin-left: 0;
+        margin-top: 24px;
+      }
+
       .skill_category {
         margin-top: 16px;
         .category_title {
@@ -118,6 +126,10 @@
     .certifications_container {
       margin-left: 24px;
       margin-top: 24px;
+
+      @include mixins.sp {
+        margin-left: 0;
+      }
 
       .certifications_list {
         .certifications_item {
