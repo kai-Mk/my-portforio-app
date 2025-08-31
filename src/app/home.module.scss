@@ -10,5 +10,9 @@
     width: 100%;
     max-width: 980px;
     margin: 0 auto;
+
+    @include sp {
+      padding: 24px 16px;
+    }
   }
 }
