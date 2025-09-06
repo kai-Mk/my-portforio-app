@@ -3,4 +3,5 @@ export type RepoData = {
   language: string;
   description: string;
   url: string;
+  homepage: string;
 };

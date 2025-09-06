@@ -2,20 +2,17 @@
 export const workData = [
   {
     name: 'コーポレートサイト改修',
-    description: 'Next.js + WordPress を用いた企業サイトのリニューアル',
-    tech: 'Next.js / WordPress / SCSS',
-    url: 'https://example-corporate.com',
+    description: 'Next.js + TypeScript + Strapi CMS を用いた企業サイトのリニューアル',
+    tech: 'Next.js / TypeScript / Strapi CMS / SCSS',
   },
   {
     name: 'ECサイト構築',
-    description: 'WooCommerce を用いた EC サイト開発',
+    description: 'WooCommerceを用いたジュエリー店のECサイト開発',
     tech: 'WooCommerce / PHP / jQuery',
-    url: 'https://example-ecshop.com',
   },
   {
     name: '業務管理システム',
-    description: 'SES会社向けの進捗管理・コードレビュー支援システム',
-    tech: 'React / TypeScript / Docker',
-    url: 'https://example-system.com',
+    description: 'SES会社向けの勤怠管理システム開発',
+    tech: 'React / Docker',
   },
 ];

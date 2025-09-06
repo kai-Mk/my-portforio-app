@@ -1,1 +1,1 @@
-export const githubRepos = ['s-labo', 'finote'];
+export const githubRepos = ['prompt_generation', 's-labo', 'finote'];

@@ -37,6 +37,10 @@ const About = () => {
                     <Star size={16} />
                     寺社仏閣をめぐり建築美や自然を感じること
                   </p>
+                  <p className={s.exciting_text}>
+                    <Star size={16} />
+                    AIを活用したプロダクト開発
+                  </p>
                 </div>
               </li>
             </ul>

@@ -15,7 +15,7 @@
       background: #fff;
       border: 1px solid #e5e7eb;
       border-radius: 12px;
-      padding: 16px;
+      padding: 16px 16px 0 16px;
       transition: all 0.2s ease;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
@@ -24,45 +24,92 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
       }
 
-      .project_link {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-        position: relative;
+      .project_name {
+        font-size: $font-size-lg;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #111827;
+      }
 
-        &::after {
-          content: 'GitHubで見る'; // tips文言
-          position: absolute;
-          top: -32px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: #111827;
-          color: #fff;
-          font-size: 0.75rem;
-          padding: 4px 8px;
-          border-radius: 6px;
-          white-space: nowrap;
-          opacity: 0;
-          pointer-events: none;
-          transition:
-            opacity 0.2s ease,
-            transform 0.2s ease;
-        }
-        &:hover::after {
-          opacity: 1;
-          transform: translateX(-50%) translateY(2px); // 少し浮かせる
-        }
+      .project_description {
+        font-size: $font-size-md;
+        margin-bottom: 8px;
+        color: #6b7280;
 
-        .project_name {
-          font-size: $font-size-lg;
-          font-weight: 600;
-          margin-bottom: 8px;
-          color: #111827;
-        }
+        // 2行に制限して省略記号を表示
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.4;
+      }
 
-        .project_lang {
-          font-size: $font-size-md;
-          color: #6b7280;
+      .project_lang {
+        font-size: $font-size-md;
+        color: #6b7280;
+      }
+
+      .links {
+        display: flex;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 8px;
+        padding: auto;
+        width: 100%;
+
+        .project_link {
+          flex: 1;
+          padding: 16 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          color: inherit;
+          transition: all 0.2s ease;
+          position: relative;
+
+          &:first-child {
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+          }
+
+          &:hover:not(.disabled) {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+          }
+
+          &.disabled {
+            color: #d1d5db;
+            cursor: not-allowed;
+            opacity: 0.5;
+
+            &:hover {
+              box-shadow: none;
+            }
+          }
+
+          .tooltip {
+            position: absolute;
+            font-size: $font-size-sm;
+            width: fit-content;
+            background-color: #6b7280;
+            color: #fff;
+            line-height: 1;
+            padding: 4px 8px;
+            border-radius: 18px;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            pointer-events: none;
+            z-index: 10;
+          }
+
+          &:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+          }
         }
       }
     }

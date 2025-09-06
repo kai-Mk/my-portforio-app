@@ -24,6 +24,7 @@ export const getGitHubData = async (repos: string[]): Promise<RepoData[]> => {
           language: data.language,
           description: data.description,
           url: data.html_url,
+          homepage: data.homepage,
         };
       })
     );
