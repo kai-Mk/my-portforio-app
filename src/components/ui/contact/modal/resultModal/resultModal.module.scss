@@ -1,0 +1,75 @@
+@use '@/styles' as *;
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal_content {
+  background: #f5f6eb;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  text-align: center;
+
+  .icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 auto 16px;
+
+    &.success_icon {
+      background: #10b981;
+      color: #fff;
+    }
+
+    &.error_icon {
+      background: #ef4444;
+      color: #fff;
+    }
+  }
+
+  .modal_title {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+  }
+
+  .modal_message {
+    font-size: $font-size-md;
+    color: #555;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .close_button {
+    font-size: $font-size-md;
+    padding: 10px 24px;
+    background: #111827;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #374151;
+    }
+  }
+}
