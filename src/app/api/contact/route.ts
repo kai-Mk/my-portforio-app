@@ -22,7 +22,7 @@ export const POST = async (request: NextRequest) => {
     const { name, email, message } = validationResult.data;
 
     const data = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>',
+      from: 'ポートフォリオサイト <onboarding@resend.dev>',
       to: [process.env.MY_EMAIL_ADDRESS as string],
       subject: `新しいお問い合わせ: ${name}様より`,
       html: `
